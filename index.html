@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#eff8f5">
+  <title>HeartCare | Heart Health Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#home">♥ HeartCare</a>
+    <p class="sidebar-label">YOUR WELLNESS SPACE</p>
+    <nav>
+      <a href="#home">⌂ Dashboard</a>
+      <a href="#assessment">▤ Health assessment</a>
+      <a href="#symptoms">♡ Symptoms</a>
+      <a href="#doctors">✚ Find a specialist</a>
+      <a href="#about">ⓘ About</a>
+    </nav>
+    <div class="sidebar-note">
+      <span class="dot"></span>
+      <div><b>Health awareness</b><small>Know your health factors</small></div>
+    </div>
+  </aside>
+
+  <main>
+    <header class="topbar" id="home">
+      <div>
+        <p class="eyebrow">HEART HEALTH DASHBOARD</p>
+        <h1>Welcome to HeartCare <span>♡</span></h1>
+        <p class="muted">Understand your health. Take informed next steps.</p>
+      </div>
+      <span class="pill">✦ Your wellness matters</span>
+    </header>
+
+    <section class="hero">
+      <div>
+        <span class="tag">A LITTLE CARE GOES A LONG WAY</span>
+        <h2>Your heart deserves <em>the best care.</em></h2>
+        <p>Review selected health factors and explore ways to request an appointment with a heart specialist.</p>
+        <a class="btn" href="#assessment">Start assessment →</a>
+      </div>
+      <div class="heart-art" aria-hidden="true">♥</div>
+    </section>
+
+    <section class="emergency">
+      <div class="alert-symbol">!</div>
+      <div class="grow">
+        <h2>Possible heart attack symptoms right now?</h2>
+        <p>Chest discomfort, breathing difficulty, cold sweats, faintness, or pain in the arm, jaw or back can be warning signs. Do not wait for an online assessment or appointment.</p>
+      </div>
+      <a class="danger-btn" href="tel:112">Call 112 — India</a>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">YOUR HEALTH JOURNEY</p>
+          <h2>Start with the essentials</h2>
+        </div>
+      </div>
+      <div class="cards three">
+        <article class="card">
+          <span class="icon">♡</span>
+          <p class="eyebrow">STEP 01</p>
+          <h3>Review health factors</h3>
+          <p>Enter selected measurements and medical history for an educational summary.</p>
+          <a href="#assessment">Start assessment →</a>
+        </article>
+        <article class="card">
+          <span class="icon">✓</span>
+          <p class="eyebrow">STEP 02</p>
+          <h3>Check symptoms</h3>
+          <p>Tell us which symptoms, if any, you are experiencing right now.</p>
+          <a href="#symptoms">Review symptoms →</a>
+        </article>
+        <article class="card">
+          <span class="icon">✚</span>
+          <p class="eyebrow">STEP 03</p>
+          <h3>Find a specialist</h3>
+          <p>Browse directory listings and submit an appointment request.</p>
+          <a href="#doctors">Find a specialist →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="assessment">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">PERSONAL HEALTH DETAILS</p>
+          <h2>Health assessment</h2>
+          <p class="muted">Complete the fields to review selected factors.</p>
+        </div>
+      </div>
+
+      <form id="healthForm" class="panel" novalidate>
+        <div class="form-title">
+          <span class="number">01</span>
+          <div><h3>Personal information</h3><p>Basic details for your educational review.</p></div>
+        </div>
+
+        <div class="form-grid">
+          <label>Age (years)
+            <input id="age" type="number" min="1" max="120" placeholder="e.g. 35" required>
+          </label>
+          <label>Sex used for clinical assessment
+            <select id="sex" required>
+              <option value="">Select</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="other">Other / prefer not to specify</option>
+            </select>
+          </label>
+          <label>Systolic blood pressure (mmHg)
+            <input id="systolic" type="number" min="50" max="300" placeholder="e.g. 120" required>
+          </label>
+          <label>Diastolic blood pressure (mmHg)
+            <input id="diastolic" type="number" min="30" max="200" placeholder="e.g. 80" required>
+          </label>
+          <label>Total cholesterol (mg/dL)
+            <input id="cholesterol" type="number" min="50" max="1000" placeholder="e.g. 180" required>
+          </label>
+          <label>Resting heart rate (bpm)
+            <input id="heartRate" type="number" min="20" max="250" placeholder="e.g. 75" required>
+          </label>
+        </div>
+
+        <div class="form-title">
+          <span class="number">02</span>
+          <div><h3>Lifestyle and medical history</h3><p>Factors that may be relevant to heart health.</p></div>
+        </div>
+
+        <div class="form-grid">
+          <label>Have you been diagnosed with diabetes?
+            <select id="diabetes" required>
+              <option value="">Select</option><option value="yes">Yes</option>
+              <option value="no">No</option><option value="unknown">Not sure</option>
+            </select>
+          </label>
+          <label>Do you currently smoke?
+            <select id="smoking" required>
+              <option value="">Select</option><option value="yes">Yes</option>
+              <option value="no">No</option><option value="former">Former smoker</option>
+            </select>
+          </label>
+          <label>Family history of early heart disease?
+            <select id="family" required>
+              <option value="">Select</option><option value="yes">Yes</option>
+              <option value="no">No</option><option value="unknown">Not sure</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="symptom-section" id="symptoms">
+          <div class="form-title">
+            <span class="number">03</span>
+            <div><h3>Symptom checklist</h3><p>Are you experiencing any of these symptoms right now?</p></div>
+          </div>
+
+          <div class="symptom-warning">
+            <b>Important</b>
+            <p>If you suspect a heart attack, seek emergency medical care immediately. Do not wait to finish this form.</p>
+          </div>
+
+          <div class="symptom-grid">
+            <label class="symptom">
+              <input type="checkbox" name="symptoms" value="Chest pain or pressure">
+              <span><b>Chest pain or pressure</b><small>Discomfort, squeezing or heaviness in the chest</small></span>
+            </label>
+            <label class="symptom">
+              <input type="checkbox" name="symptoms" value="Shortness of breath">
+              <span><b>Shortness of breath</b><small>Difficulty breathing or catching your breath</small></span>
+            </label>
+            <label class="symptom">
+              <input type="checkbox" name="symptoms" value="Arm or shoulder pain">
+              <span><b>Arm or shoulder pain</b><small>Pain or discomfort in one or both arms</small></span>
+            </label>
+            <label class="symptom">
+              <input type="checkbox" name="symptoms" value="Jaw, neck or back pain">
+              <span><b>Jaw, neck or back pain</b><small>Discomfort beyond the chest</small></span>
+            </label>
+            <label class="symptom">
+              <input type="checkbox" name="symptoms" value="Cold sweats">
+              <span><b>Cold sweats</b><small>Sudden, unexplained clammy sweating</small></span>
+            </label>
+            <label class="symptom">
+              <input type="checkbox" name="symptoms" value="Nausea or vomiting">
+              <span><b>Nausea or vomiting</b><small>Feeling sick or being sick</small></span>
+            </label>
+            <label class="symptom">
+              <input type="checkbox" name="symptoms" value="Dizziness or faintness">
+              <span><b>Dizziness or faintness</b><small>Feeling lightheaded or about to faint</small></span>
+            </label>
+            <label class="symptom">
+              <input type="checkbox" name="symptoms" value="Unusual fatigue">
+              <span><b>Unusual fatigue</b><small>Sudden or unexplained exhaustion</small></span>
+            </label>
+          </div>
+
+          <label class="symptom none">
+            <input type="checkbox" id="noSymptoms">
+            <span><b>I am not experiencing any of these symptoms</b><small>Select only if none apply.</small></span>
+          </label>
+        </div>
+
+        <button class="btn full" type="submit">Review my information →</button>
+        <p class="tiny center">This frontend demo does not send or store health assessment data.</p>
+      </form>
+      <div id="results" class="panel results" aria-live="polite" hidden></div>
+    </section>
+
+    <section class="section" id="doctors">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">PATIENT–DOCTOR CONNECTION</p>
+          <h2>Find a heart specialist</h2>
+          <p class="muted">Sample listings are placeholders until verified by the site administrator.</p>
+        </div>
+      </div>
+
+      <div class="cards two">
+        <article class="card doctor-card">
+          <span class="doctor-status">Demo listing</span>
+          <h3>Cardiology specialist</h3>
+          <p>Cardiology · Add a participating hospital</p>
+          <p>This is a placeholder, not a verified clinician profile.</p>
+          <button type="button" class="btn choose-doctor" data-doctor="cardiology-placeholder">Request appointment</button>
+        </article>
+        <article class="card doctor-card">
+          <span class="doctor-status">Demo listing</span>
+          <h3>Cardiac surgery specialist</h3>
+          <p>Cardiac Surgery · Add a participating hospital</p>
+          <p>This is a placeholder, not a verified clinician profile.</p>
+          <button type="button" class="btn choose-doctor" data-doctor="surgery-placeholder">Request appointment</button>
+        </article>
+      </div>
+
+      <div class="panel appointment-panel">
+        <div class="form-title">
+          <span class="number">✚</span>
+          <div><h3>Request an appointment</h3><p>This demo shows a preview only. It does not save or send requests.</p></div>
+        </div>
+        <form id="appointmentForm">
+          <div class="form-grid">
+            <label>Full name<input name="patientName" maxlength="100" autocomplete="name" required></label>
+            <label>Email address<input name="email" type="email" maxlength="254" autocomplete="email" required></label>
+            <label>Phone number<input name="phone" type="tel" maxlength="30" autocomplete="tel" required></label>
+            <label>Choose a directory listing
+              <select name="doctorId" id="doctorId" required>
+                <option value="">Choose a directory listing</option>
+                <option value="cardiology-placeholder">Cardiology specialist (demo)</option>
+                <option value="surgery-placeholder">Cardiac surgery specialist (demo)</option>
+              </select>
+            </label>
+            <label>Preferred date<input name="preferredDate" id="preferredDate" type="date" required></label>
+            <label>Preferred time
+              <select name="preferredTime" required>
+                <option value="">Select</option><option value="morning">Morning</option>
+                <option value="afternoon">Afternoon</option><option value="evening">Evening</option>
+                <option value="any">Any time</option>
+              </select>
+            </label>
+          </div>
+          <label class="block-label">Optional note (avoid sensitive medical details)
+            <textarea name="reason" maxlength="500" rows="3" placeholder="Brief reason for the appointment, if you wish."></textarea>
+          </label>
+          <label class="consent">
+            <input type="checkbox" name="consent" required>
+            <span>I understand this demo does not send or book an appointment, and consent to showing a local preview of the details I enter.</span>
+          </label>
+          <button class="btn" type="submit">Preview request →</button>
+          <div id="appointmentMessage" class="message" role="status" aria-live="polite" hidden></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section panel about" id="about">
+      <p class="eyebrow">OUR PURPOSE</p>
+      <h2>About HeartCare</h2>
+      <p>HeartCare is an educational prototype for reviewing selected cardiovascular factors and demonstrating an appointment request workflow. It is not a medical diagnostic tool.</p>
+      <div class="symptom-warning">
+        <b>Medical disclaimer</b>
+        <p>A normal-looking form result cannot rule out a heart attack. For possible symptoms, seek emergency care immediately. In India, call 112.</p>
+      </div>
+      <p class="tiny">Do not enter real patient information into this frontend demo. Real patient data requires a secure backend, access controls, a privacy notice and appropriate review.</p>
+    </section>
+  </main>
+
+  <footer><b>♥ HeartCare</b><span>Educational prototype · Not a medical device</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
